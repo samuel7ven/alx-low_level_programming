@@ -1,39 +1,26 @@
 #include "holberton.h"
 
 /**
- *powB - raises the number base to power power
- *@base : the base
- *@power : the power
- *Return: return the answer
- */
-int powB(unsigned int base, int power)
+  * print_number - print numbers chars
+  * @n: integer params
+  * Return: 0
+ **/
+
+void print_number(int n)
 {
-	int i, prod = 1;
+	unsigned int n1;
 
-	for (i = 0; i < power; i++)
+	n1 = n;
+
+	if (n < 0)
 	{
-		prod = prod * base;
-	}
-	return (prod);
-}
-
-/**
- *numLength - returns the lenth of string
- *@num : operand number
- *Return: number of digits
- */
-int numLength(unsigned int num)
-{
-	int length = 0;
-
-	if (!num)
-		return (1);
-
-	while (num)
-	{
-		num = num / 10;
-		length += 1;
+		_putchar('-');
+		n1 = -n;
 	}
 
-	return (length);
+	if (n1 / 10 != 0)
+	{
+		print_number(n1 / 10);
+	}
+	_putchar((n1 % 10) + '0');
 }
