@@ -20,6 +20,7 @@ int _strlen(char *str)
 
 }
 
+
 /**
  *_strncat - concatinates two strings
  *@dest:destination pointer
